@@ -3,11 +3,6 @@
 Python3 wrapper around the [CoinMarketCap](https://coinmarketcap.com//)
 
 ### Installation
-PyPI
-```bash
-pip install coinmarketcap_scrape_top
-```
-or from source
 ```bash
 git clone https://github.com/kuka666/coinmarketcap_scrape_top.git
 cd coinmarketcap_scrape_top
