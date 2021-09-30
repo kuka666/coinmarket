@@ -22,14 +22,6 @@ scrape = scrapper()
 ```
 
 ### Examples
-The required parameters for each endpoint are defined as required (mandatory) parameters for the corresponding functions.\
-**Any optional parameters** can be passed using same names, as defined in CoinGecko API doc (https://www.coingecko.com/api/docs/v3)
-
-For any parameter:
-- ***Lists** are supported as input for multiple-valued comma-separated parameters\
-  (e.g. see /simple/price usage examples).*
-- ***Booleans** are supported as input for boolean type parameters; they can be `str` ('true', 'false'') or `bool` (`True`, `False`)\
-  (e.g. see /simple/price usage examples).*
 
 Usage examples:
 ```python
