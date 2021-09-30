@@ -5,7 +5,7 @@ Python3 wrapper around the [CoinMarketCap](https://coinmarketcap.com//)
 ### Installation
 ```bash
 git clone https://github.com/kuka666/coinmarket.git
-cd coinmarketcap_scrape_top
+cd coinmarket
 pip install -r requirements.txt 
 ```
 
