@@ -11,7 +11,7 @@ or from source
 ```bash
 git clone https://github.com/kuka666/coinmarketcap_scrape_top.git
 cd coinmarketcap_scrape_top
-pip install requirements.txt 
+pip install -r requirements.txt 
 ```
 
 ### Usage
