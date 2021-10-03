@@ -12,8 +12,8 @@ pip install -r requirements.txt
 ### Usage
 
 ```python
-from coinmarketcap_scrape_top import scrapper
-scrape = scrapper()
+from main import KukaScrape
+scrape = KukaScrape()
 ```
 
 ### Examples
