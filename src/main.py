@@ -6,6 +6,7 @@ import csv
 array = []
 
 class KukaScrape:
+    @staticmethod
     def get_link():
         url = f'https://coinmarketcap.com/all/views/all/'
         r = requests.get(url)
@@ -19,7 +20,7 @@ class KukaScrape:
                 for links in all_links:
                     urls = links.get("href").replace("markets/", "")
                     array.append(urls)
-
+    @staticmethod
     def get_top():
         KukaScrape.get_link()
         main = list(dict.fromkeys(array))
@@ -36,7 +37,7 @@ class KukaScrape:
                 stats = bsoup.find_all(class_="statsValue")
                 print(
                     f'{rank.text} {name.text} ----- {price_value.text} ----- {stats[0].text} ---- {stats[2].text} ')
-
+    @staticmethod
     def get_coin_data():
         KukaScrape.get_link()
         name = str(input("Coin name to output data:"))
