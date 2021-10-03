@@ -5,9 +5,8 @@ import numpy as np
 import csv
 array = []
 
-
-class scrapper:
-    def get_top():
+class KukaScrape:
+    def get_link():
         url = f'https://coinmarketcap.com/all/views/all/'
         r = requests.get(url)
         bsoup = bs(r.text, 'html.parser')
@@ -21,6 +20,8 @@ class scrapper:
                     urls = links.get("href").replace("markets/", "")
                     array.append(urls)
 
+    def get_top():
+        KukaScrape.get_link()
         main = list(dict.fromkeys(array))
         top_to_see = int(input("Number to output top:"))
         print(f'RANK ***** NAME ******** PRICE ****** MARKET CAPITILIZATION ******* VOLUME 24h')
@@ -35,3 +36,22 @@ class scrapper:
                 stats = bsoup.find_all(class_="statsValue")
                 print(
                     f'{rank.text} {name.text} ----- {price_value.text} ----- {stats[0].text} ---- {stats[2].text} ')
+
+    def get_coin_data():
+        KukaScrape.get_link()
+        name = str(input("Coin name to output data:"))
+        name1 = name.lower()
+        print(f'RANK ***** NAME ******** PRICE ****** MARKET CAPITILIZATION ******* VOLUME 24h********Procent')
+        url = f"https://coinmarketcap.com/currencies/{name1}/"
+        r = requests.get(url)
+        bsoup = bs(r.content, 'lxml')
+        for i in range(1):
+
+            rank = bsoup.find(class_="namePill namePillPrimary")
+            price_value = bsoup.find(class_="priceValue")
+            name = bsoup.find('h2', class_="sc-1q9q90x-0 jCInrl h1")
+            stats = bsoup.find_all(class_="statsValue")
+            procent = bsoup.find(class_="sc-15yy2pl-0 kAXKAX")
+            print(
+                f'{rank.text} {name.text} ----- {price_value.text} ----- {stats[0].text} ---- {stats[2].text} -----{procent.text}')
+    
