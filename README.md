@@ -13,11 +13,12 @@ pip install -r requirements.txt
 ### Usage
 ```bash
 First of all you should change the your path in test.py.In my instance:
+```
 ```python
 import sys
 sys.path.insert(0, '/Users/kukak/IdeaProjects/untitled/src/test/coinmarket/src')
 ```
-```
+
 ```python
 from main import KukaScrape
 scrape = KukaScrape()
