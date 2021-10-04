@@ -19,6 +19,10 @@ import sys
 sys.path.insert(0, '/Users/kukak/IdeaProjects/untitled/src/test/coinmarket/src')
 ```
 
+
+```bash
+Then Import class:
+```
 ```python
 from main import KukaScrape
 scrape = KukaScrape()
